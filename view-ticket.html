@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate</title>
+    <!-- ============= Custome CSS ============== -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ===== Loader Start ===== -->
+    <div id="loader">
+      <div class="loader-content text-center">
+        <div class="logo-circle mb-3">
+          <ion-icon name="home-outline"></ion-icon>
+        </div>
+        <h2 class="loader-title">Real Estate Portal</h2>
+        <p class="loader-subtitle">Loading your dashboard...</p>
+      </div>
+    </div>
+    <!-- ============== Navigation ================= -->
+    <div class="container-fluid p-0 m-0">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="stats-chart-outline"></ion-icon
+              ></span>
+              <span class="title">Real Estate Portal</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <span class="icon"
+                ><ion-icon name="home-outline"></ion-icon
+              ></span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+
+          <!-- Properties -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="business-outline"></ion-icon
+              ></span>
+              <span class="title">Properties</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li>
+                <a href="properties/all-properties.html">All Properties</a>
+              </li>
+              <li><a href="properties/create.html">Add Property</a></li>
+              <li>
+                <a href="properties/property-types.html">Property Types</a>
+              </li>
+              <li><a href="properties/amenities.html">Amenities</a></li>
+            </ul>
+          </li>
+
+          <!-- Agents -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="people-outline"></ion-icon
+              ></span>
+              <span class="title">Agents</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="agents/all-agents.html">All Agents</a></li>
+              <li><a href="agents/create.html">Add Agent</a></li>
+              <li><a href="agents/agent-reviews.html">Agent Reviews</a></li>
+            </ul>
+          </li>
+
+          <!-- Customers -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="person-circle-outline"></ion-icon
+              ></span>
+              <span class="title">Customers</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="customers/all-customers.html">All Customers</a></li>
+              <li><a href="customers/leads.html">Leads</a></li>
+              <li>
+                <a href="customers/saved-properties.html">Saved Properties</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Listings -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="albums-outline"></ion-icon
+              ></span>
+              <span class="title">Listings</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li>
+                <a href="listings/active-listings.html">Active Listings</a>
+              </li>
+              <li>
+                <a href="listings/pending-listings.html">Pending Listings</a>
+              </li>
+              <li>
+                <a href="listings/rejected-listings.html">Rejected Listings</a>
+              </li>
+              <li>
+                <a href="listings/expired-listings.html">Expired Listings</a>
+              </li>
+              <li><a href="listings/draft-listings.html">Draft Listings</a></li>
+            </ul>
+          </li>
+          <!-- Bookings -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="calendar-outline"></ion-icon
+              ></span>
+              <span class="title">Bookings</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="bookings/all-bookings.html">All Bookings</a></li>
+              <li>
+                <a href="bookings/upcoming-visits.html">Upcoming Visits</a>
+              </li>
+              <li><a href="bookings/completed-bookings.html">Completed</a></li>
+              <li><a href="bookings/cancelled-bookings.html">Cancelled</a></li>
+            </ul>
+          </li>
+          <!-- Payments -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="card-outline"></ion-icon
+              ></span>
+              <span class="title">Payments</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="payments/transactions.html">Transactions</a></li>
+              <li><a href="payments/invoices.html">Invoices</a></li>
+              <li>
+                <a href="payments/payment-settings.html">Payment Settings</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- CMS -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="document-text-outline"></ion-icon
+              ></span>
+              <span class="title">CMS</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="cms/blogs.html">Blogs</a></li>
+              <li><a href="cms/blog-categories.html">Blog Categories</a></li>
+              <li><a href="cms/pages.html">Pages</a></li>
+              <li><a href="cms/banners.html">Banners</a></li>
+            </ul>
+          </li>
+
+          <!-- Settings -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="settings-outline"></ion-icon
+              ></span>
+              <span class="title">Settings</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="settings/profile.html">Profile Settings</a></li>
+              <li><a href="settings/settings.html">System Settings</a></li>
+              <li>
+                <a href="settings/roles-permissions.html"
+                  >Roles & Permissions</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- Support -->
+          <li>
+            <a href="support.html">
+              <span class="icon"
+                ><ion-icon name="help-outline"></ion-icon
+              ></span>
+              <span class="title">Support</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="log-out-outline"></ion-icon
+              ></span>
+              <span class="title">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ====================== main ===================== -->
+      <div class="main p-4">
+        <!-- Topbar -->
+        <div class="topbar d-flex justify-content-between align-items-center">
+          <div class="toggle">
+            <ion-icon name="menu"></ion-icon>
+          </div>
+          <h4 class="m-0 fw-bold">
+            <ion-icon name="help-circle-outline"></ion-icon> View Ticket
+          </h4>
+          <div class="user">
+            <img
+              src="../assets/imgs/customer01.jpg"
+              alt="user"
+              class="rounded-circle"
+              width="35"
+            />
+          </div>
+        </div>
+
+        <!-- Ticket Header -->
+        <div class="card shadow-sm mt-4">
+          <div class="card-body">
+            <div
+              class="d-flex justify-content-between align-items-start flex-wrap"
+            >
+              <div>
+                <h5 class="fw-bold mb-1">
+                  <ion-icon name="alert-circle-outline"></ion-icon>
+                  Password Reset Issue
+                </h5>
+                <p class="mb-1 text-muted">
+                  Created by <strong>Ali Khan</strong> •
+                  <span class="text-secondary">02 Nov 2025</span>
+                </p>
+              </div>
+              <div class="text-end">
+                <span class="badge bg-info text-dark me-2">Open</span>
+                <span class="badge bg-warning text-dark">Medium Priority</span>
+              </div>
+            </div>
+            <hr />
+            <p class="text-muted mb-0">
+              User reports they are unable to reset their password using the
+              “Forgot Password” feature. The link sent via email shows an error
+              page.
+            </p>
+          </div>
+        </div>
+
+        <!-- Conversation Thread -->
+        <div class="card shadow-sm mt-4">
+          <div class="card-header bg-light fw-bold">
+            <ion-icon name="chatbubbles-outline"></ion-icon> Conversation
+          </div>
+          <div class="card-body" style="max-height: 400px; overflow-y: auto">
+            <!-- User Message -->
+            <div class="d-flex mb-4">
+              <img
+                src="../assets/imgs/customer01.jpg"
+                class="rounded-circle me-3"
+                width="45"
+                alt="user"
+              />
+              <div>
+                <div class="p-3 rounded-3 bg-light border">
+                  <p class="mb-1 fw-bold">Ali Khan (User)</p>
+                  <p class="mb-2">
+                    I tried to reset my password twice but the email link
+                    doesn’t work.
+                  </p>
+                  <small class="text-muted">02 Nov 2025 – 10:30 AM</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Admin Reply -->
+            <div class="d-flex mb-4 flex-row-reverse text-end">
+              <img
+                src="../assets/imgs/admin.jpg"
+                class="rounded-circle ms-3"
+                width="45"
+                alt="admin"
+              />
+              <div>
+                <div class="p-3 rounded-3 bg-primary text-white">
+                  <p class="mb-1 fw-bold">Admin Response</p>
+                  <p class="mb-2">
+                    Thanks for reporting! We’ve checked your account and sent a
+                    new password reset link. Please try again.
+                  </p>
+                  <small class="text-light">02 Nov 2025 – 11:05 AM</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- User Follow-up -->
+            <div class="d-flex mb-4">
+              <img
+                src="../assets/imgs/customer01.jpg"
+                class="rounded-circle me-3"
+                width="45"
+                alt="user"
+              />
+              <div>
+                <div class="p-3 rounded-3 bg-light border">
+                  <p class="mb-1 fw-bold">Ali Khan (User)</p>
+                  <p class="mb-2">
+                    It worked now, thank you! Please close the ticket.
+                  </p>
+                  <small class="text-muted">02 Nov 2025 – 11:20 AM</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reply Box -->
+        <div class="card shadow-sm mt-4">
+          <div class="card-header bg-light fw-bold">
+            <ion-icon name="send-outline"></ion-icon> Add Reply
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  rows="4"
+                  placeholder="Type your reply..."
+                ></textarea>
+              </div>
+              <div
+                class="mb-3 d-flex justify-content-between align-items-center"
+              >
+                <input type="file" class="form-control w-50" />
+                <div>
+                  <button type="button" class="btn btn-outline-secondary me-2">
+                    <ion-icon name="close-outline"></ion-icon> Close Ticket
+                  </button>
+                  <button type="submit" class="btn btn-primary">
+                    <ion-icon name="send-outline"></ion-icon> Send Reply
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =========== custome js ============= -->
+    <script src="assets/js/main.js"></script>
+    <!-- Bootstrap & Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- ========icons libary ============== -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

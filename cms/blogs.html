@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate</title>
+    <!-- ============= Custome CSS ============== -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ===== Loader Start ===== -->
+    <div id="loader">
+      <div class="loader-content text-center">
+        <div class="logo-circle mb-3">
+          <ion-icon name="home-outline"></ion-icon>
+        </div>
+        <h2 class="loader-title">Real Estate Portal</h2>
+        <p class="loader-subtitle">Loading your dashboard...</p>
+      </div>
+    </div>
+    <!-- ============== Navigation ================= -->
+    <div class="container-fluid p-0 m-0">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="stats-chart-outline"></ion-icon
+              ></span>
+              <span class="title">Real Estate Portal</span>
+            </a>
+          </li>
+          <li>
+            <a href="../index.html">
+              <span class="icon"
+                ><ion-icon name="home-outline"></ion-icon
+              ></span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+
+          <!-- Properties -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="business-outline"></ion-icon
+              ></span>
+              <span class="title">Properties</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li>
+                <a href="properties/all-properties.html">All Properties</a>
+              </li>
+              <li><a href="properties/create.html">Add Property</a></li>
+              <li>
+                <a href="properties/property-types.html">Property Types</a>
+              </li>
+              <li><a href="properties/amenities.html">Amenities</a></li>
+            </ul>
+          </li>
+
+          <!-- Agents -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="people-outline"></ion-icon
+              ></span>
+              <span class="title">Agents</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="agents/all-agents.html">All Agents</a></li>
+              <li><a href="agents/create.html">Add Agent</a></li>
+              <li><a href="agents/agent-reviews.html">Agent Reviews</a></li>
+            </ul>
+          </li>
+
+          <!-- Customers -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="person-circle-outline"></ion-icon
+              ></span>
+              <span class="title">Customers</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="customers/all-customers.html">All Customers</a></li>
+              <li><a href="customers/leads.html">Leads</a></li>
+              <li>
+                <a href="customers/saved-properties.html">Saved Properties</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Listings -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="albums-outline"></ion-icon
+              ></span>
+              <span class="title">Listings</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li>
+                <a href="listings/active-listings.html">Active Listings</a>
+              </li>
+              <li>
+                <a href="listings/pending-listings.html">Pending Listings</a>
+              </li>
+              <li>
+                <a href="listings/rejected-listings.html">Rejected Listings</a>
+              </li>
+              <li>
+                <a href="listings/expired-listings.html">Expired Listings</a>
+              </li>
+              <li><a href="listings/draft-listings.html">Draft Listings</a></li>
+            </ul>
+          </li>
+          <!-- Bookings -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="calendar-outline"></ion-icon
+              ></span>
+              <span class="title">Bookings</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="bookings/all-bookings.html">All Bookings</a></li>
+              <li>
+                <a href="bookings/upcoming-visits.html">Upcoming Visits</a>
+              </li>
+              <li><a href="bookings/completed-bookings.html">Completed</a></li>
+              <li><a href="bookings/cancelled-bookings.html">Cancelled</a></li>
+            </ul>
+          </li>
+          <!-- Payments -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="card-outline"></ion-icon
+              ></span>
+              <span class="title">Payments</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="payments/transactions.html">Transactions</a></li>
+              <li><a href="payments/invoices.html">Invoices</a></li>
+              <li>
+                <a href="payments/payment-settings.html">Payment Settings</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- CMS -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="document-text-outline"></ion-icon
+              ></span>
+              <span class="title">CMS</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="blogs.html">Blogs</a></li>
+              <li><a href="blog-categories.html">Blog Categories</a></li>
+              <li><a href="pages.html">Pages</a></li>
+              <li><a href="banners.html">Banners</a></li>
+            </ul>
+          </li>
+
+          <!-- Settings -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="settings-outline"></ion-icon
+              ></span>
+              <span class="title">Settings</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="#">Profile Settings</a></li>
+              <li><a href="#">System Settings</a></li>
+              <li><a href="#">Roles & Permissions</a></li>
+            </ul>
+          </li>
+
+          <!-- Support -->
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="help-outline"></ion-icon
+              ></span>
+              <span class="title">Support</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="log-out-outline"></ion-icon
+              ></span>
+              <span class="title">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ====================== main ===================== -->
+      <div class="main p-4">
+        <!-- Topbar -->
+        <div class="topbar">
+          <div class="toggle"><ion-icon name="menu"></ion-icon></div>
+          <div class="search">
+            <label>
+              <input type="text" placeholder="Search categories..." />
+              <ion-icon name="search"></ion-icon>
+            </label>
+          </div>
+          <div class="user">
+            <img
+              src="../assets/imgs/customer01.jpg"
+              alt="user"
+              class="rounded-circle"
+              width="35"
+            />
+          </div>
+        </div>
+
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fw-bold text-dark">
+            <ion-icon name="newspaper-outline"></ion-icon> Blogs
+          </h3>
+          <a href="../cms/create.html" class="btn btn-outline-primary btn-sm">
+            <ion-icon name="add-outline"></ion-icon> Add Blog
+          </a>
+        </div>
+
+        <!-- Filters -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-4">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by title or author..."
+            />
+          </div>
+          <div class="col-md-3">
+            <select class="form-select">
+              <option>All Categories</option>
+              <option>Property Tips</option>
+              <option>Market News</option>
+              <option>Investment</option>
+              <option>Buying Guide</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <select class="form-select">
+              <option>Sort By</option>
+              <option>Newest</option>
+              <option>Oldest</option>
+              <option>A–Z</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="card p-3 shadow-sm">
+          <div class="table-responsive">
+            <table class="table align-middle table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Thumbnail</th>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Author</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <img
+                      src="../assets/images/blog1.jpg"
+                      alt="Blog"
+                      class="rounded"
+                      width="60"
+                      height="40"
+                    />
+                  </td>
+                  <td>Top 10 Real Estate Investment Tips</td>
+                  <td>Investment</td>
+                  <td>Ali Khan</td>
+                  <td>02 Nov 2025</td>
+                  <td>
+                    <span class="badge bg-success">Published</span>
+                  </td>
+                   <td>
+                    <button class="btn btn-sm btn-info text-white me-1">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+                    <button class="btn btn-sm btn-warning text-white me-1">
+                      <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                    <button class="btn btn-sm btn-danger">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <img
+                      src="../assets/images/blog2.jpg"
+                      alt="Blog"
+                      class="rounded"
+                      width="60"
+                      height="40"
+                    />
+                  </td>
+                  <td>How to Find the Perfect Home</td>
+                  <td>Buying Guide</td>
+                  <td>Fatima Noor</td>
+                  <td>29 Oct 2025</td>
+                  <td>
+                    <span class="badge bg-warning text-dark">Draft</span>
+                  </td>
+                   <td>
+                    <button class="btn btn-sm btn-info text-white me-1">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+                    <button class="btn btn-sm btn-warning text-white me-1">
+                      <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                    <button class="btn btn-sm btn-danger">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add/Edit Modal -->
+    <div
+      class="modal fade"
+      id="categoryModal"
+      tabindex="-1"
+      aria-labelledby="categoryModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-md modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="categoryModalLabel">
+              <ion-icon name="folder-open-outline"></ion-icon> Add Blog Category
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label class="form-label fw-bold">Category Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter category name"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-bold">Slug</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="auto-generated or custom slug"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-bold">Status</label>
+                <select class="form-select">
+                  <option>Active</option>
+                  <option>Inactive</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+              Cancel
+            </button>
+            <button class="btn btn-primary">
+              <ion-icon name="save-outline"></ion-icon> Save Category
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =========== custome js ============= -->
+    <script src="../assets/js/main.js"></script>
+    <!-- Bootstrap & Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- ========icons libary ============== -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

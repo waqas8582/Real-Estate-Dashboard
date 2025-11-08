@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate</title>
+    <!-- ============= Custome CSS ============== -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ===== Loader Start ===== -->
+    <div id="loader">
+      <div class="loader-content text-center">
+        <div class="logo-circle mb-3">
+          <ion-icon name="home-outline"></ion-icon>
+        </div>
+        <h2 class="loader-title">Real Estate Portal</h2>
+        <p class="loader-subtitle">Loading your dashboard...</p>
+      </div>
+    </div>
+    <!-- ============== Navigation ================= -->
+    <div class="container-fluid p-0 m-0">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="stats-chart-outline"></ion-icon
+              ></span>
+              <span class="title">Real Estate Portal</span>
+            </a>
+          </li>
+          <li>
+            <a href="../index.html">
+              <span class="icon"
+                ><ion-icon name="home-outline"></ion-icon
+              ></span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+
+          <!-- Properties -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="business-outline"></ion-icon
+              ></span>
+              <span class="title">Properties</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="all-properties.html">All Properties</a></li>
+              <li><a href="create.html">Add Property</a></li>
+              <li><a href="property-types.html">Property Types</a></li>
+              <li><a href="amenities.html">Amenities</a></li>
+            </ul>
+          </li>
+
+          <!-- Agents -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="people-outline"></ion-icon
+              ></span>
+              <span class="title">Agents</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="all-agents.html">All Agents</a></li>
+              <li><a href="create.html">Add Agent</a></li>
+              <li><a href="#">Agent Reviews</a></li>
+            </ul>
+          </li>
+
+          <!-- Customers -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="person-circle-outline"></ion-icon
+              ></span>
+              <span class="title">Customers</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="all-customers.html">All Customers</a></li>
+              <li><a href="leads.html" class="active">Leads</a></li>
+              <li><a href="#">Saved Properties</a></li>
+            </ul>
+          </li>
+
+          <!-- Listings -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="albums-outline"></ion-icon
+              ></span>
+              <span class="title">Listings</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li>
+                <a href="../listings/active-listings.html">Active Listings</a>
+              </li>
+              <li>
+                <a href="../listings/pending-listings.html">Pending Listings</a>
+              </li>
+              <li><a href="#">Rejected Listings</a></li>
+            </ul>
+          </li>
+          <!-- Bookings -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="calendar-outline"></ion-icon
+              ></span>
+              <span class="title">Bookings</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="../bookings/all-bookings.html">All Bookings</a></li>
+              <li>
+                <a href="../bookings/upcoming-visits.html">Upcoming Visits</a>
+              </li>
+              <li>
+                <a href="../bookings/visit-calendar-view.html"
+                  >Visits Calendar</a
+                >
+              </li>
+              <li>
+                <a href="../bookings/completed-bookings.html">Completed</a>
+              </li>
+              <li>
+                <a href="../bookings/cancelled-bookings.html">Cancelled</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Payments -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="card-outline"></ion-icon
+              ></span>
+              <span class="title">Payments</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="../payments/transactions.html">Transactions</a></li>
+              <li><a href="../payments/invoices.html">Invoices</a></li>
+              <li>
+                <a href="../payments/payment-settings.html">Payment Settings</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- CMS -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="document-text-outline"></ion-icon
+              ></span>
+              <span class="title">CMS</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="../cms/blogs.html">Blogs</a></li>
+              <li><a href="../cms/blog-categories.html">Blog Categories</a></li>
+              <li><a href="../cms/pages.html">Pages</a></li>
+              <li><a href="../cms/banners.html">Banners</a></li>
+            </ul>
+          </li>
+
+          <!-- Settings -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="settings-outline"></ion-icon
+              ></span>
+              <span class="title">Settings</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="#">Profile Settings</a></li>
+              <li><a href="#">System Settings</a></li>
+              <li><a href="#">Roles & Permissions</a></li>
+            </ul>
+          </li>
+
+          <!-- Support -->
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="help-outline"></ion-icon
+              ></span>
+              <span class="title">Support</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="log-out-outline"></ion-icon
+              ></span>
+              <span class="title">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ====================== main ===================== -->
+      <div class="main p-4">
+        <!-- Top Bar -->
+        <div class="topbar">
+          <div class="toggle"><ion-icon name="menu"></ion-icon></div>
+          <div class="search">
+            <label>
+              <input type="text" placeholder="Search leads..." />
+              <ion-icon name="search"></ion-icon>
+            </label>
+          </div>
+          <div class="user">
+            <img
+              src="../assets/imgs/customer01.jpg"
+              alt=""
+              class="rounded-circle"
+              width="35"
+            />
+          </div>
+        </div>
+
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fw-bold text-dark">
+            <ion-icon name="mail-unread-outline"></ion-icon> Leads
+          </h3>
+          <button class="btn btn-outline-primary btn-sm">
+            <ion-icon name="refresh-outline"></ion-icon> Refresh
+          </button>
+        </div>
+
+        <!-- Filters -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-4">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by name, email or phone..."
+            />
+          </div>
+          <div class="col-md-3">
+            <select class="form-select">
+              <option>All Status</option>
+              <option>New</option>
+              <option>Contacted</option>
+              <option>Converted</option>
+              <option>Lost</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <select class="form-select">
+              <option>Sort By</option>
+              <option>Newest</option>
+              <option>Oldest</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="card p-3 shadow-sm">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>#</th>
+                  <th>Lead Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Interested In</th>
+                  <th>Status</th>
+                  <th>Added On</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Ahmed Khan</td>
+                  <td>ahmed.khan@example.com</td>
+                  <td>+92 304 1122334</td>
+                  <td>3 Marla House</td>
+                  <td><span class="status success">Contacted</span></td>
+                  <td>2025-04-02</td>
+                  <td>
+                    <button class="btn btn-sm btn-info text-white">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+                    <button class="btn btn-sm btn-success">
+                      <ion-icon name="checkmark-done-outline"></ion-icon>
+                    </button>
+                    <button class="btn btn-sm btn-danger">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Maryam Iqbal</td>
+                  <td>maryam@example.com</td>
+                  <td>+92 311 9988776</td>
+                  <td>Commercial Shop</td>
+                  <td><span class="status pending">New</span></td>
+                  <td>2025-04-05</td>
+                  <td>
+                    <button class="btn btn-sm btn-info text-white">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </button>
+                    <button class="btn btn-sm btn-success">
+                      <ion-icon name="checkmark-done-outline"></ion-icon>
+                    </button>
+                    <button class="btn btn-sm btn-danger">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =========== custome js ============= -->
+    <script src="../assets/js/main.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ========icons libary ============== -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

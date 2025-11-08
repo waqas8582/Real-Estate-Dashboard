@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate</title>
+    <!-- ============= Custome CSS ============== -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ===== Loader Start ===== -->
+    <div id="loader">
+      <div class="loader-content text-center">
+        <div class="logo-circle mb-3">
+          <ion-icon name="home-outline"></ion-icon>
+        </div>
+        <h2 class="loader-title">Real Estate Portal</h2>
+        <p class="loader-subtitle">Loading your dashboard...</p>
+      </div>
+    </div>
+    <!-- ============== Navigation ================= -->
+    <div class="container-fluid p-0 m-0">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="stats-chart-outline"></ion-icon
+              ></span>
+              <span class="title">Real Estate Portal</span>
+            </a>
+          </li>
+          <li>
+            <a href="../index.html">
+              <span class="icon"
+                ><ion-icon name="home-outline"></ion-icon
+              ></span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+
+          <!-- Properties -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="business-outline"></ion-icon
+              ></span>
+              <span class="title">Properties</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li>
+                <a href="../properties/all-properties.html">All Properties</a>
+              </li>
+              <li><a href="../properties/create.html">Add Property</a></li>
+              <li>
+                <a href="../properties/property-types.html">Property Types</a>
+              </li>
+              <li><a href="../properties/amenities.html">Amenities</a></li>
+            </ul>
+          </li>
+
+          <!-- Agents -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="people-outline"></ion-icon
+              ></span>
+              <span class="title">Agents</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="../agents/all-agents.html">All Agents</a></li>
+              <li><a href="../agents/create.html">Add Agent</a></li>
+              <li><a href="../agents/agent-reviews.html">Agent Reviews</a></li>
+            </ul>
+          </li>
+
+          <!-- Customers -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="person-circle-outline"></ion-icon
+              ></span>
+              <span class="title">Customers</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="../customers/all-customers.html">All Customers</a></li>
+              <li><a href="../customers/leads.html">Leads</a></li>
+              <li>
+                <a href="../customers/saved-properties.html">Saved Properties</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Listings -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="albums-outline"></ion-icon
+              ></span>
+              <span class="title">Listings</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li>
+                <a href="../listings/active-listings.html">Active Listings</a>
+              </li>
+              <li>
+                <a href="../listings/pending-listings.html">Pending Listings</a>
+              </li>
+              <li>
+                <a href="../listings/rejected-listings.html">Rejected Listings</a>
+              </li>
+              <li>
+                <a href="../listings/expired-listings.html">Expired Listings</a>
+              </li>
+              <li><a href="../listings/draft-listings.html">Draft Listings</a></li>
+            </ul>
+          </li>
+          <!-- Bookings -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="calendar-outline"></ion-icon
+              ></span>
+              <span class="title">Bookings</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="../bookings/all-bookings.html">All Bookings</a></li>
+              <li>
+                <a href="../bookings/upcoming-visits.html">Upcoming Visits</a>
+              </li>
+              <li><a href="../bookings/completed-bookings.html">Completed</a></li>
+              <li><a href="../bookings/cancelled-bookings.html">Cancelled</a></li>
+            </ul>
+          </li>
+          <!-- Payments -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="card-outline"></ion-icon
+              ></span>
+              <span class="title">Payments</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="../payments/transactions.html">Transactions</a></li>
+              <li><a href="../payments/invoices.html">Invoices</a></li>
+              <li>
+                <a href="../payments/payment-settings.html">Payment Settings</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- CMS -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="document-text-outline"></ion-icon
+              ></span>
+              <span class="title">CMS</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="../cms/blogs.html">Blogs</a></li>
+              <li><a href="../cms/blog-categories.html">Blog Categories</a></li>
+              <li><a href="../cms/pages.html">Pages</a></li>
+              <li><a href="../cms/banners.html">Banners</a></li>
+            </ul>
+          </li>
+
+          <!-- Settings -->
+          <li class="has-submenu">
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="settings-outline"></ion-icon
+              ></span>
+              <span class="title">Settings</span>
+            </a>
+            <ul class="submenu">
+              <li></li>
+              <li><a href="profile.html">Profile Settings</a></li>
+              <li><a href="settings.html">System Settings</a></li>
+              <li><a href="roles-permissions.html">Roles & Permissions</a></li>
+            </ul>
+          </li>
+
+          <!-- Support -->
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="help-outline"></ion-icon
+              ></span>
+              <span class="title">Support</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="log-out-outline"></ion-icon
+              ></span>
+              <span class="title">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ====================== main ===================== -->
+      <div class="main p-4">
+        <div class="topbar">
+          <div class="toggle">
+            <ion-icon name="menu"></ion-icon>
+          </div>
+          <div class="search">
+            <label for="">
+              <input type="text" placeholder="Search here" />
+              <ion-icon name="search"></ion-icon>
+            </label>
+          </div>
+          <div class="user">
+            <img src="../assets/imgs/customer01.jpg" alt="" />
+          </div>
+        </div>
+        <!-- ===== Profile Settings Page ===== -->
+        <div class="details">
+          <div class="recentOrders">
+            <div class="cardHeader">
+              <h2>Profile Settings</h2>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4 text-center">
+                <div class="profile-photo mb-3">
+                  <img
+                    src="../assets/imgs/customer01.jpg"
+                    alt="Profile Photo"
+                    class="rounded-circle img-fluid"
+                    style="width: 150px; height: 150px; object-fit: cover"
+                  />
+                </div>
+                <button class="btn btn-primary">Change Photo</button>
+              </div>
+
+              <div class="col-md-8">
+                <form>
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Full Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter full name"
+                        value="Waqas"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Enter email"
+                        value="admin@example.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Phone</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter phone"
+                        value="+92 300 1234567"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Username</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter username"
+                        value="admin"
+                      />
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <h5 class="mb-3">Change Password</h5>
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label class="form-label">New Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        placeholder="New password"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Confirm Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        placeholder="Confirm password"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="text-end">
+                    <button type="submit" class="btn btn-success">
+                      Save Changes
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ===== End Profile Settings ===== -->
+      </div>
+    </div>
+    <!-- =========== custome js ============= -->
+    <script src="../assets/js/main.js"></script>
+    <!-- Bootstrap & Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- ========icons libary ============== -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

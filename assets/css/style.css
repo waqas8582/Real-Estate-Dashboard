@@ -1,0 +1,806 @@
+/* =========== google fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =========== global css ================ */
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #2a2185;
+  --white: #fff;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative !important;
+  width: 100% !important;
+  padding: 0% !important;
+  margin: 0 !important;
+}
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--blue);
+  border-left: 10px solid var(--blue);
+  transition: 0.5s;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.navigation.active {
+  width: 80px;
+  padding-left: 5px;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 0% !important;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background-color: var(--white);
+}
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--white);
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: var(--blue);
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+  font-size: 1.75rem;
+}
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+/* ------------ curave outside ------------ */
+/* .navigation ul li:hover a::before,
+.navigation ul li.hovered a::before
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 35px 35px 0 10px var(--white); 
+} */
+
+/* .navigation ul li:hover a::after,
+.navigation ul li.hovered a::after
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 35px -35px 0 10px var(--white); 
+} */
+/* ===== Attractive Submenu Styling ===== */
+
+.navigation ul .submenu {
+  background: linear-gradient(145deg, #241c74, #2d26a5);
+  display: none;
+  flex-direction: column;
+  padding: 0;
+  margin-top: 0;
+  border-left: 3px solid #fff3;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.navigation ul li.has-submenu.open > .submenu {
+  display: flex;
+  max-height: 300px;
+  opacity: 1;
+}
+
+.navigation ul .submenu li {
+  list-style: none;
+  position: relative;
+}
+
+.navigation ul .submenu li a {
+  color: #e2e2e2;
+  font-size: 0.9rem;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  position: relative;
+}
+
+.navigation ul .submenu li a::before {
+  content: "•";
+  position: absolute;
+  left: 10px;
+  font-size: 1rem;
+  color: #fff8;
+  transition: 0.3s;
+}
+
+.navigation ul .submenu li a:hover::before {
+  color: var(--white);
+  transform: scale(1.3);
+}
+
+.navigation ul .submenu li a:hover {
+  color: var(--blue);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(5px);
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown arrow styling */
+.navigation ul li.has-submenu > a::after {
+  content: "\25BC";
+  font-size: 0.6rem;
+  position: absolute;
+  right: 20px;
+  top: 24px;
+  color: var(--white);
+  transition: transform 0.3s, color 0.3s;
+}
+
+.navigation ul li.has-submenu:hover > a::after {
+  color: var(--blue);
+}
+
+.navigation ul li.has-submenu.open > a::after {
+  transform: rotate(180deg);
+  color: var(--blue);
+}
+
+/* Responsive collapse fix */
+.navigation.active ul .submenu {
+  display: none !important;
+  opacity: 0;
+  max-height: 0;
+}
+
+/* =============== Main ===================== */
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+}
+.main.active {
+  width: calc(100% -80px);
+  left: 80px;
+}
+.topbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+.search {
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+.search label {
+  position: relative;
+  width: 100%;
+}
+.search label input {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  padding: 5px 20px;
+  outline: none;
+  padding-left: 35px;
+  font-size: 18px;
+  border: 1px solid var(--black2);
+}
+.search label ion-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2rem;
+}
+.user {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.user img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ===== Cards ===== */
+.card-box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card-box:hover {
+  transform: translateY(-5px);
+}
+
+.card-box .icon {
+  font-size: 2rem;
+  color: #2d26a5;
+  margin-bottom: 10px;
+}
+
+.card-box h5 {
+  color: #555;
+  font-weight: 600;
+}
+
+.card-box h3 {
+  color: #241c74;
+  font-weight: 700;
+}
+
+/* ===== Table ===== */
+.table-section {
+  margin-top: 40px;
+}
+
+.table th {
+  background: #241c74;
+  color: #fff;
+}
+.thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.85rem;
+}
+.status.success {
+  background: #28a745;
+}
+.status.pending {
+  background: #ffc107;
+  color: #000;
+}
+.status.failed {
+  background: #dc3545;
+}
+
+.activity-list {
+  list-style: none;
+  padding-left: 0;
+}
+.activity-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #555;
+}
+.activity-list ion-icon {
+  font-size: 1.2rem;
+  color: var(--blue);
+  margin-right: 8px;
+}
+.gradient-blue {
+  background: linear-gradient(135deg, #2d26a5, #5a4df3);
+  color: #fff;
+}
+.gradient-green {
+  background: linear-gradient(135deg, #28a745, #5cd46d);
+  color: #fff;
+}
+.gradient-orange {
+  background: linear-gradient(135deg, #ff9800, #ffb74d);
+  color: #fff;
+}
+.gradient-purple {
+  background: linear-gradient(135deg, #673ab7, #9c27b0);
+  color: #fff;
+}
+
+.card-box .growth {
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+.thumb {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.status.success {
+  background: #d4edda;
+  color: #155724;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.status.failed {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.table-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.cardForm {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.section-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  border-left: 4px solid #1e90ff;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.form-control,
+.form-select {
+  border-radius: 8px;
+  border: 1px solid #dcdde1;
+}
+.property-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.form-control:focus,
+.form-select:focus {
+  box-shadow: none;
+  border-color: #1e90ff;
+}
+
+.btn-primary {
+  background-color: #1e90ff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 25px;
+}
+
+.btn-primary:hover {
+  background-color: #187bcd;
+}
+
+.upload-box {
+  border: 2px dashed #cbd3da;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px;
+  background: #fff;
+  transition: all 0.3s;
+}
+
+.upload-box:hover {
+  border-color: #1e90ff;
+  background: #f8faff;
+}
+
+.upload-box ion-icon {
+  font-size: 40px;
+  color: #1e90ff;
+}
+
+.feature-list label {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 8px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.search input {
+  border: none;
+  background: #fff;
+  padding: 8px 35px;
+  border-radius: 20px;
+  outline: none;
+}
+
+/* ===== Chart Section ===== */
+.chart-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 350px;
+}
+/* ================== Visit Calendar View ================== */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.calendar-header {
+  font-weight: 600;
+  color: #666;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 6px;
+}
+
+.calendar-day {
+  position: relative;
+  background: #f9fafb;
+  border-radius: 10px;
+  min-height: 100px;
+  padding: 8px;
+  transition: all 0.3s;
+}
+
+.calendar-day:hover {
+  background: #eef4ff;
+  cursor: pointer;
+}
+
+.calendar-day.disabled {
+  background: #f1f1f1;
+  color: #aaa;
+}
+
+.calendar-day span {
+  font-weight: 500;
+  color: #333;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+}
+
+.visit-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  padding: 4px 8px;
+  color: white;
+  border-radius: 5px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+
+/* ==================== Media Query For Responsive  Design ================================= */
+@media (max-width: 991px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+  }
+  .main.active {
+    left: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+}
+@media (max-width: 480px) {
+  .user {
+    min-width: 40px;
+  }
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .toggle {
+    z-index: 10001;
+  }
+  .main.active .toggle {
+    color: #fff;
+    position: fixed;
+    right: 0;
+    left: initial;
+  }
+}
+
+/* ====== Loader Style ====== */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(145deg, var(--blue), #0077cc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Loader Content */
+.loader-content {
+  color: var(--white);
+  font-family: "Ubuntu", sans-serif;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Logo Circle */
+.logo-circle {
+  width: 90px;
+  height: 90px;
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  border-top-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 1.5s linear infinite;
+}
+
+.logo-circle ion-icon {
+  font-size: 2.2rem;
+  color: var(--white);
+}
+
+/* Text Animation */
+.loader-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.loader-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Advanced Form Effects ===== */
+.advanced-form {
+  background: linear-gradient(135deg, #eef2f7, #ffffff);
+  min-height: 100vh;
+  animation: fadeBg 2s ease;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient Buttons */
+.gradient-btn {
+  background: linear-gradient(135deg, #2a2185, #4a6cf7);
+  color: #fff !important;
+  border-radius: 10px;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+}
+.gradient-btn:hover {
+  background: linear-gradient(135deg, #4a6cf7, #2a2185);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(42, 33, 133, 0.3);
+}
+
+/* Inputs with modern style */
+.stylish-input {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #d0d7e2;
+}
+.stylish-input:focus {
+  border-color: #4a6cf7;
+  box-shadow: 0 0 8px rgba(74, 108, 247, 0.2);
+}
+
+/* Upload Box Glow */
+.glow-hover {
+  transition: all 0.3s ease;
+}
+.glow-hover:hover {
+  border-color: #4a6cf7 !important;
+  box-shadow: 0 0 12px rgba(74, 108, 247, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeBg {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.7s ease forwards;
+  opacity: 0;
+}
+@keyframes fadeUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Checkbox style */
+.feature-list label input {
+  accent-color: #4a6cf7;
+  transform: scale(1.2);
+  margin-right: 6px;
+}
+.feature-list label {
+  font-weight: 500;
+  color: #444;
+  background: #f7f8ff;
+  border-radius: 8px;
+  padding: 6px 12px;
+  transition: 0.3s;
+}
+.feature-list label:hover {
+  background: #e9ecff;
+  color: #2a2185;
+}
+
