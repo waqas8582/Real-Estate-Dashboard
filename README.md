@@ -44,7 +44,7 @@ It provides an elegant interface to manage properties, agents, customers, sales,
 
 1. Clone this repository or download the ZIP file  
    ```bash
-   git clone https://github.com/your-username/real-estate-dashboard.git
+   git clone https://github.com/waqas8582/Real-Estate-Dashboard.git
    ```
 2. Open the project folder  
    ```bash
